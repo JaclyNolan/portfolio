@@ -2,15 +2,15 @@
 <template>
   <v-app-bar app color="white" :elevation="0" class="px-4">
     <v-toolbar-title>
-      <router-link to="/" class="text-decoration-none white--text">Jack.dev</router-link>
+      <router-link to="/" class="text-decoration-none white--text">Jack Ánh.dev</router-link>
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
 
-    <app-header-nav-button route="/" icon="mdi-home" label="Home"/>
-    <app-header-nav-button route="/" icon="mdi-home" label="About"/>
-    <app-header-nav-button route="/" icon="mdi-home" label="Project"/>
-    <app-header-nav-button route="/" icon="mdi-home" label="Contact"/>
+    <app-header-nav-button routeName="Home" icon="mdi-home" label="Home"/>
+    <app-header-nav-button routeName="About" icon="mdi-home" label="About"/>
+    <app-header-nav-button routeName="About" icon="mdi-home" label="Project"/>
+    <app-header-nav-button routeName="Home" icon="mdi-home" label="Contact"/>
 
 
     <!-- <v-navigation-drawer v-model="drawer" app>

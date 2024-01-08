@@ -1,5 +1,5 @@
 <template>
-    <v-btn class="lighten-4 mr-2" @click="goTo(route)">
+    <v-btn class="lighten-4 mr-2" @click="goTo(routeName)">
         <v-icon class="mr-1">{{ icon }}</v-icon>
         <div class="text-button">{{ label }}</div>
     </v-btn>
@@ -8,13 +8,13 @@
 <script>
 export default {
     props: {
-        route: {
+        routeName: {
             type: String,
             require: false,
         },
         icon: {
             type: String,
-            require: true, 
+            require: true,
         },
         label: {
             type: String,
@@ -22,8 +22,9 @@ export default {
         },
     },
     methods: {
-        goTo(route) {
-            this.$router.push(route);
+        goTo(routeName) {
+            // Navigate to the specified route
+            this.$router.push({ name: routeName });
         }
     }
 }
