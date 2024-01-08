@@ -5,27 +5,27 @@
     <app-logo></app-logo>
     <v-spacer></v-spacer>
 
-    <app-header-nav-button routeName="Home" icon="mdi-home" label="Home" />
-    <app-header-nav-button routeName="About" icon="mdi-home" label="About" />
-    <app-header-nav-button routeName="About" icon="mdi-home" label="Project" />
-    <app-header-nav-button routeName="Home" icon="mdi-home" label="Contact" />
+    <div class="d-none d-md-flex">
+      <app-header-nav-button v-for="(item, index) in items" :key="index" :routeName="item.routeName" :icon="item.icon"
+        :label="item.label" />
+    </div>
 
+    <div class="d-md-none">
+      <v-btn :icon="drawer ? 'mdi-close' : 'mdi-menu'" variant="text" @click.stop="drawer = !drawer"></v-btn>
+    </div>
 
-    <!-- <v-navigation-drawer v-model="drawer" app>
-        <v-list>
-          <v-list-item-group>
-            <v-list-item v-for="(item, index) in items" :key="index" @click="goTo(item.route)">
-              <v-list-item-action>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer> -->
   </v-app-bar>
+  <v-navigation-drawer app v-model="drawer" class="d-md-none d-flex" @resize="drawer = false" width="1000">
+    <v-sheet class="d-flex align-center justify-center h-100 w-100">
+      <v-grid class="h-auto w-auto">
+        <v-row v-for="(item, index) in items" :key="index">
+          <v-btn variant="text" class="lighten-4" @click="goTo(item.routeName)" :prepend-icon="item.icon">
+            {{ item.label }}
+          </v-btn>
+        </v-row>
+      </v-grid>
+    </v-sheet>
+  </v-navigation-drawer>
 </template>
   
 <script>
@@ -35,23 +35,23 @@ import AppHeaderNavButton from './AppHeaderNavButton.vue';
 export default {
   data() {
     return {
-      // drawer: false,
-      // items: [
-      //   { title: 'Home', icon: 'mdi-home', route: '/' },
-      //   { title: 'About', icon: 'mdi-account', route: '/about' },
-      //   { title: 'Projects', icon: 'mdi-briefcase', route: '/projects' },
-      //   { title: 'Contact', icon: 'mdi-email', route: '/contact' },
-      // ],
+      drawer: false,
+      items: [
+        { routeName: 'Home', icon: 'mdi-home', label: 'Home' },
+        { routeName: 'About', icon: 'mdi-account', label: 'About' },
+        { routeName: 'Home', icon: 'mdi-briefcase', label: 'Projects' },
+        { routeName: 'Home', icon: 'mdi-email', label: 'Contact' },
+      ],
     };
   },
   methods: {
     //   toggleDrawer() {
     //     this.drawer = !this.drawer;
     //   },
-    //   goTo(route) {
-    //     this.$router.push(route);
-    //     this.drawer = false;
-    //   },
+    goTo(routeName) {
+      this.$router.push({ name: routeName });
+      this.drawer = false;
+    },
   },
   components: { AppHeaderNavButton, AppLogo }
 };

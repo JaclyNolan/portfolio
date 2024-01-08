@@ -1,7 +1,6 @@
 <template>
-    <v-btn class="lighten-4 mr-2" @click="goTo(routeName)">
-        <v-icon class="mr-1">{{ icon }}</v-icon>
-        <div class="text-button">{{ label }}</div>
+    <v-btn :prepend-icon="icon" variant="text" class="lighten-4 mr-2" @click="goTo(routeName)">
+        {{ label }}
     </v-btn>
 </template>
 
