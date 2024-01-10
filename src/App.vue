@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main id="main">
       <AppHeader></AppHeader>
       <router-view />
     </v-main>
@@ -22,3 +22,10 @@ export default {
   }),
 }
 </script>
+
+<style lang="scss">
+#main {
+  position: relative;
+  padding: 0px !important;
+}
+</style>

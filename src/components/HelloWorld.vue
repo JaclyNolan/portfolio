@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-sheet style="position: relative;">
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
@@ -89,7 +89,7 @@
         </v-row>
       </v-col>
     </v-row>
-  </v-container>
+  </v-sheet>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <!-- src/components/Header.vue -->
 <template>
-  <v-app-bar app color="white" :elevation="2" class="px-4">
+  <v-app-bar app fixed color="white" :elevation="2" class="px-4">
 
     <app-logo></app-logo>
     <v-spacer></v-spacer>
@@ -17,13 +17,13 @@
   </v-app-bar>
   <v-navigation-drawer app v-model="drawer" class="d-md-none d-flex" @resize="drawer = false" width="1000">
     <v-sheet class="d-flex align-center justify-center h-100 w-100">
-      <v-grid class="h-auto w-auto">
+      <v-container class="h-auto w-auto">
         <v-row v-for="(item, index) in items" :key="index">
           <v-btn variant="text" class="lighten-4" @click="goTo(item.routeName)" :prepend-icon="item.icon">
             {{ item.label }}
           </v-btn>
         </v-row>
-      </v-grid>
+      </v-container>
     </v-sheet>
   </v-navigation-drawer>
 </template>
