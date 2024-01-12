@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'scss/_breakpoints';
+@import 'scss/_fonts';
+@import 'scss/_typography';
 #main {
   position: relative;
   padding: 0px !important;

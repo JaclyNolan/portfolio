@@ -1,16 +1,15 @@
 <template>
-  <section id="home">
-    <v-sheet id="home-sheet" color="#f9f9f9" height="100vh">
+  <section class="section" id="home">
       <AppHero></AppHero>
-    </v-sheet>
+  </section>
+  <section class="section" id="about-me">
+    
   </section>
 </template>
 
 <style lang="scss">
-#home-sheet {
-  display: flex-start;
-  justify-content: center;
-  padding: 5rem 0;
+.section {
+  gap: 7rem;
 }
 </style>
 
