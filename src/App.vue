@@ -27,6 +27,7 @@ export default {
 @import 'scss/_breakpoints';
 @import 'scss/_fonts';
 @import 'scss/_typography';
+@import 'scss/_boilerplate';
 #main {
   position: relative;
   padding: 0px !important;

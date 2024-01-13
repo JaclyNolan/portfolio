@@ -1,25 +1,29 @@
 <template>
   <section class="section" id="home">
-      <AppHero></AppHero>
+    <AppHero></AppHero>
   </section>
   <section class="section" id="about-me">
+    <AppAboutMe></AppAboutMe>
+  </section>
+  <section class="section" id="projects">
     
   </section>
 </template>
 
 <style lang="scss">
-.section {
-  gap: 7rem;
+#home {
+  background-color: #f9f9f9;
 }
 </style>
 
 <script>
+import AppAboutMe from '@/components/AppAboutMe.vue';
 import AppHero from '@/components/AppHero.vue';
 
 // @ is an alias to /src
 
 export default {
   name: 'HomeView',
-  components: { AppHero }
+  components: { AppHero, AppAboutMe }
 }
 </script>

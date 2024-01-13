@@ -1,6 +1,6 @@
 <template>
-    <v-sheet id="home-sheet">
-        <v-sheet id="hero-card">
+    <div class="container" id="home-sheet">
+        <div id="hero-card">
             <img id="hero-avatar" :src="require('@/assets/avatar.jpg')" alt="Jack_Ánh" />
             <h1>Front-End React Developer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')" alt="waving_hand">
             </h1>
@@ -11,27 +11,27 @@
                 <v-icon icon="mdi-linkedin" size="30"></v-icon>
                 <v-icon icon="mdi-github" size="30"></v-icon>
             </span>
-        </v-sheet>
-        <v-sheet id="skills">
-                <p>Tech Stack</p>
+        </div>
+        <div id="skills">
+            <p>Tech Stack</p>
             <div id="logo">
                 <ul>
                     <li>
-                        <img src="https://skillicons.dev/icons?i=html,css" alt="html,css"/>
+                        <img src="https://skillicons.dev/icons?i=html,css" alt="html,css" />
                     </li>
                     <li>
-                        <img src="https://skillicons.dev/icons?i=js,ts" alt="javascript,typescript"/>
+                        <img src="https://skillicons.dev/icons?i=js,ts" alt="javascript,typescript" />
                     </li>
                     <li>
-                        <img src="https://skillicons.dev/icons?i=react,scss" alt="react,scss"/>
+                        <img src="https://skillicons.dev/icons?i=react,scss" alt="react,scss" />
                     </li>
                     <li>
-                        <img src="https://skillicons.dev/icons?i=vue,laravel" alt="vue,laravel"/>
+                        <img src="https://skillicons.dev/icons?i=vue,laravel" alt="vue,laravel" />
                     </li>
                 </ul>
             </div>
-        </v-sheet>
-    </v-sheet>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -44,8 +44,8 @@ export default {
 #home-sheet {
     display: flex;
     flex-direction: column;
-    height: calc(max(100vh, fit-content));
-    background-color: #f9f9f9;
+    min-height: 100vh;
+    gap: 4rem;
 }
 
 #home-sheet * {
@@ -56,16 +56,13 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 0 1rem 0 1rem;
-    margin: 5rem auto 5rem auto;
     background-color: transparent;
     gap: 1.5rem;
-    max-width: 24rem;
-
 }
-
 
 #hero-card #hero-avatar {
     display: inline-block;
+    left: 50%;
     padding: 0 3rem 0 3rem;
     max-width: 25rem;
     max-height: 25rem;
