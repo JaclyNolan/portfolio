@@ -80,8 +80,6 @@ export default {
         text-align: left;
         align-items: start;
         justify-content: center;
-
-        img {}
     }
     #about-me-text {
         margin-top: 0;

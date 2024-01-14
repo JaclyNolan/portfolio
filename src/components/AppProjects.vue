@@ -8,9 +8,43 @@
                 Each project is a unique piece of development 🧩
             </p>
             <div id="projects-grid">
-                <v-sheet class="project-showcase" elevation="5" rounded="lg">
+                <v-sheet class="project-showcase" elevation="4" rounded="lg">
                     <v-sheet class="project-windows-container">
-                        <v-window class="project-windows elevation-2 rounded-lg" v-model="portfolioWindow" show-arrows="hover">
+                        <v-window class="project-windows elevation-2 rounded-lg" v-model="portfolioWindow"
+                            show-arrows="hover">
+                            <v-window-item v-for="(image, index) in portolioWindowImages" :key="index">
+                                <v-img class="project-image bg-gray" :src="image.path" :aspect-ratio="16 / 9" />
+                            </v-window-item>
+                        </v-window>
+                    </v-sheet>
+                    <div class="project-description">
+                        <h3>Portfolio <span class="project-date">(January 2024)</span></h3>
+                        <p>A viewable portfolio to display my personal projects as well as real projects. The website's
+                            design was based on another React portfolio developer. It can adapt to any screensize while
+                            still remain stylish throughout. It is built on Vue and SCSS</p>
+                        <div class="stack">
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Vue</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">SCSS</v-sheet>
+                        </div>
+                        <div class="links">
+                            <v-hover v-slot:default="{ isHovering, props }">
+                                <a href="https://github.com/JaclyNolan/portfolio" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-github" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Code</v-btn>
+                                </a>
+                            </v-hover>
+                            <v-hover v-slot:default="{ isHovering, props }">
+                                <a href="https://www.stefantopalovic.com/" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-palette" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Design</v-btn>
+                                </a>
+                            </v-hover>
+                        </div>
+                    </div>
+                </v-sheet>
+                <v-sheet class="project-showcase" elevation="4" rounded="lg">
+                    <v-sheet class="project-windows-container">
+                        <v-window class="project-windows elevation-2 rounded-lg" v-model="FPTWindow" show-arrows="hover">
                             <v-window-item v-for="(image, index) in portolioWindowImages" :key="index">
                                 <v-img class="project-image bg-gray" :src="image.path" :aspect-ratio="16 / 9" />
                             </v-window-item>
@@ -55,6 +89,7 @@ export default {
                 { path: require('@/assets/portfolio_example_1.png') },
                 { path: require('@/assets/portfolio_example_2.png') },
             ],
+            FPTWindow: true,
         }
     },
 }
@@ -156,6 +191,7 @@ export default {
 }
 
 @include lg {
+
     .projects-content {
 
         >h3 {
@@ -168,11 +204,26 @@ export default {
     }
 
     .project-showcase {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        color: white;
-        margin: 3rem 0.5rem 0 0.5rem;
-        padding: 1rem;
+        &:nth-child(even) {
+            grid-template-columns: 45% 55%;
+
+            .project-description {
+                grid-column-start: 1;
+                grid-row-start: 1;
+            }
+        }
+
+        grid-template-columns: 55% 45%;
+        align-items: center;
+
+        .project-windows-container,
+        .project-windows {
+            height: 100%;
+        }
+    }
+
+    .project-description {
+        margin: 2rem 0;
     }
 }
 </style>
