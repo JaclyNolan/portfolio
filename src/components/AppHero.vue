@@ -147,18 +147,50 @@ export default {
         font-family: var(--ff-body);
         font-size: var(--fs-500);
         color: #2d2e32;
-        font-weight: 600;
+        font-weight: 800;
         border-bottom: 2px solid rgba(45, 46, 50, .5);
         border-right: none;
         padding-bottom: 0.5rem;
     }
-
-
 }
 
-@include lg {
+@media (min-width: 67rem) {
+    #home-sheet {
+        padding-top: 10rem;
+    }
     #hero-card {
         flex-direction: row-reverse;
+
+        h1,
+        p {
+            text-align: left;
+        }
+    }
+
+    #hero-social {
+        margin: 0;
+        justify-content: left;
+    }
+
+    #skills {
+        margin-top: 3rem;
+        flex-direction: row;
+        align-items: center;
+
+        ul {
+            justify-content: left;
+        }
+
+        p {
+            display: block;
+            box-sizing: border-box;
+            margin: 0;
+            border-bottom: none;
+            border-right: 2px solid rgba(45, 46, 50, .5);
+            padding-bottom: 0;
+            padding-right: 0.5rem;
+            margin-right: 5rem;
+        }
     }
 }
 </style>

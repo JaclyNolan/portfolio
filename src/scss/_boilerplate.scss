@@ -4,6 +4,13 @@
   max-width: 40rem;
 }
 
+@media (min-width: 67rem) {
+  .container {
+    max-width: 67rem;
+    padding: 7rem 0;
+  }
+}
+
 .container * {
   background-color: transparent;
 }
