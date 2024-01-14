@@ -28,6 +28,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '../scss/_breakpoints';
 
 #contact-list {
     display: flex;
@@ -68,4 +69,10 @@ export default {
             transition: all .3s;
         }
     }
-}</style>
+}
+@include lg {
+    #contact-list {
+        gap: 4rem;
+    }
+}
+</style>

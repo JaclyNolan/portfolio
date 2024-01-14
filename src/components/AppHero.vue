@@ -154,7 +154,7 @@ export default {
     }
 }
 
-@media (min-width: 67rem) {
+@include lg {
     #home-sheet {
         padding-top: 10rem;
     }

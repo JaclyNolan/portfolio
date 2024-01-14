@@ -1,10 +1,12 @@
+@import '../scss/_breakpoints';
+
 .container {
   margin: 0 auto;
   padding: 5rem 0;
   max-width: 40rem;
 }
 
-@media (min-width: 67rem) {
+@include lg {
   .container {
     max-width: 67rem;
     padding: 7rem 0;
