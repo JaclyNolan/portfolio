@@ -2,7 +2,7 @@
     <div class="container" id="home-sheet">
         <div id="hero-card">
             <img id="hero-avatar" :src="require('@/assets/avatar.jpg')" alt="Jack_Ánh" />
-            <div>
+            <div id="hero-info">
                 <h1>Front-End React Developer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')"
                         alt="waving_hand">
                 </h1>
@@ -80,6 +80,12 @@ export default {
         }
     }
 
+    #hero-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
     h1 {
         margin-top: 1rem;
         color: #2d2e32;
@@ -112,6 +118,7 @@ export default {
     display: flex;
     gap: 1rem;
     margin: 0 auto 0 auto;
+    justify-content: center;
 
     >a {
         text-decoration: none;
