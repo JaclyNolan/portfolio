@@ -8,6 +8,9 @@
   <section class="section" id="projects">
     <AppProjects></AppProjects>
   </section>
+  <section class="section" id="contact">
+    <AppContact></AppContact>
+  </section>
 </template>
 
 <style lang="scss">
@@ -18,6 +21,7 @@
 
 <script>
 import AppAboutMe from '@/components/AppAboutMe.vue';
+import AppContact from '@/components/AppContact.vue';
 import AppHero from '@/components/AppHero.vue';
 import AppProjects from '@/components/AppProjects.vue';
 
@@ -25,6 +29,6 @@ import AppProjects from '@/components/AppProjects.vue';
 
 export default {
   name: 'HomeView',
-  components: { AppHero, AppAboutMe, AppProjects }
+  components: { AppHero, AppAboutMe, AppProjects, AppContact }
 }
 </script>

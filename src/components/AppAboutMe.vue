@@ -10,7 +10,7 @@
                 based in Hanoi, Vietnam 📍
             </h4>
             <p>
-                As a Fresher Front-End Developer, I have gather myself a practical skillset from participating in real
+                As a Fresher Front-End Developer, I have gathered myself a practical skillset from participating in real
                 projects as a six-month full-stack intern. Furthermore, I prossess an impressive arsenal of skills in HTML,
                 CSS, Javascript, React, SCSS, Vue, and Laravel. I focus in building responsive webpage given a design and
                 handling complex design relatively fine. I strive to write optimized and clean code that work elequantly
@@ -44,7 +44,7 @@ export default {
 }
 
 #about-me-text h3 {
-    font-family: Poppins, sans-serif;
+    font-family: var(--ff-heading);
     font-size: var(--fs-500);
     color: #147efb;
     font-weight: 700;
@@ -52,14 +52,14 @@ export default {
 }
 
 #about-me-text h4 {
-    font-family: Poppins, sans-serif;
+    font-family: var(--ff-heading);
     font-size: var(--fs-600);
     color: #2d2e32;
     line-height: 1.4;
 }
 
 #about-me-text p {
-    font-family: Mulish, sans-serif;
+    font-family: var(--ff-body);
     font-size: var(--fs-400);
     color: #767676;
     line-height: 1.5;

@@ -1,6 +1,6 @@
 <template>
     <div class="container" id="projects-sheet">
-        <div id="projects-content">
+        <div class="projects-content">
             <h3>
                 Portfolio
             </h3>
@@ -27,12 +27,16 @@
                         </div>
                         <div class="links">
                             <v-hover v-slot:default="{ isHovering, props }">
-                                <v-btn class="link-btn" v-bind="props" append-icon="mdi-github" variant="Text" :color="isHovering ? '#147efb'
-                                    : '#2d2e32'">Code</v-btn>
+                                <a href="https://github.com/JaclyNolan/portfolio" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-github" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Code</v-btn>
+                                </a>
                             </v-hover>
                             <v-hover v-slot:default="{ isHovering, props }">
-                                <v-btn class="link-btn" v-bind="props" append-icon="mdi-palette" variant="Text" :color="isHovering ? '#147efb'
-                                    : '#2d2e32'">Design</v-btn>
+                                <a href="https://www.stefantopalovic.com/" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-palette" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Design</v-btn>
+                                </a>
                             </v-hover>
                         </div>
                     </div>
@@ -56,34 +60,29 @@ export default {
 }
 </script>
 <style lang="scss">
-#projects-sheet {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
 
-#projects-content {
+.projects-content {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 0.5rem;
-}
 
-#projects-content>h3 {
-    font-family: Poppins, sans-serif;
-    font-size: var(--fs-500);
-    color: #147efb;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+    >h3 {
+        font-family: var(--ff-heading);
+        font-size: var(--fs-500);
+        color: #147efb;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
 
-#projects-content>p {
-    font-family: Poppins, sans-serif;
-    font-size: var(--fs-600);
-    color: #2d2e32;
-    font-weight: 700;
-    margin-top: 0.5rem;
+    >p {
+        font-family: var(--ff-heading);
+        font-size: var(--fs-600);
+        color: #2d2e32;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
 }
 
 .project-showcase {
@@ -108,28 +107,29 @@ export default {
     flex-direction: column;
     gap: 1rem;
     margin: 1rem 0;
-}
+    text-align: center;
 
-.project-description h3 {
-    color: #2d2e32;
-    font-size: var(--fs-600);
-    font-weight: 700;
-    font-family: Poppins, sans-serif;
-    text-transform: capitalize;
-}
+    h3 {
+        color: #2d2e32;
+        font-size: var(--fs-600);
+        font-weight: 700;
+        font-family: var(--ff-heading);
+        text-transform: capitalize;
 
-.project-description h3>span {
-    color: hsla(0, 5%, 8%, .773);
-    font-size: var(--fs-500);
-    text-transform: capitalize;
-    font-family: Poppins, sans-serif;
-}
+        >span {
+            color: hsla(0, 5%, 8%, .773);
+            font-size: var(--fs-500);
+            text-transform: capitalize;
+            font-family: var(--ff-heading);
+        }
+    }
 
-.project-description p {
-    color: #767676;
-    font-size: var(--fs-400);
-    font-weight: 500;
-    font-family: Mulish, sans-serif;
+    p {
+        color: #767676;
+        font-size: var(--fs-400);
+        font-weight: 500;
+        font-family: var(--ff-body);
+    }
 }
 
 .stack {
@@ -141,7 +141,7 @@ export default {
 .stack-item {
     display: block;
     padding: 0.5rem;
-    font-family: Mulish, sans-serif;
+    font-family: var(--ff-body);
     font-size: var(--fs-500);
     font-weight: 600;
 }

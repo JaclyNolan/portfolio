@@ -8,8 +8,12 @@
                 Hi, I'm Jack Ánh. A passionate Front-end React/Vue Developer based in Hanoi, Vietnam.
             </p>
             <span id="hero-social">
-                <v-icon icon="mdi-linkedin" size="30"></v-icon>
-                <v-icon icon="mdi-github" size="30"></v-icon>
+                <a href="https://facebook.com/Jacly123" target="_blank">
+                    <v-icon icon="mdi-facebook" size="30"></v-icon>
+                </a>
+                <a href="https://github.com/JaclyNolan" target="_blank">
+                    <v-icon icon="mdi-github" size="30"></v-icon>
+                </a>
             </span>
         </div>
         <div id="skills">
@@ -46,10 +50,10 @@ export default {
     flex-direction: column;
     min-height: 100vh;
     gap: 4rem;
-}
 
-#home-sheet * {
-    background-color: transparent;
+    * {
+        background-color: transparent;
+    }
 }
 
 #hero-card {
@@ -58,50 +62,56 @@ export default {
     padding: 0 1rem 0 1rem;
     background-color: transparent;
     gap: 1.5rem;
-}
 
-#hero-card #hero-avatar {
-    display: inline-block;
-    left: 50%;
-    padding: 0 3rem 0 3rem;
-    max-width: 25rem;
-    max-height: 25rem;
-    object-position: 50% 20%;
-    object-fit: cover;
-    border-radius: 50%;
-}
+    #hero-avatar {
+        padding: 0 3rem 0 3rem;
+        max-width: 25rem;
+        max-height: 25rem;
+        object-fit: cover;
+        border-radius: 50%;
 
-#hero-card h1 {
-    margin-top: 1rem;
-    color: #2d2e32;
-    display: inline-block;
-    text-align: center;
-    font-size: var(--fs-xl);
-    font-family: Poppins, sans-serif;
-    line-height: 1;
-}
+        @media (min-width: 25rem) {
+            align-self: center;
+        }
+    }
 
-#hero-card p {
-    color: #555;
-    display: inline-block;
-    text-align: center;
-    font-size: var(--fs-400);
-    font-family: Mulish, sans-serif;
-    font-weight: 500;
-    line-height: 1.6;
-}
+    h1 {
+        margin-top: 1rem;
+        color: #2d2e32;
+        display: inline-block;
+        text-align: center;
+        font-size: var(--fs-xl);
+        font-family: var(--ff-heading);
+        line-height: 1;
+    }
 
-#hero-card #hero-emoji {
-    display: inline-block;
-    position: relative;
-    top: 0.5rem;
-    height: var(--fs-xl);
+    p {
+        color: #555;
+        display: inline-block;
+        text-align: center;
+        font-size: var(--fs-400);
+        font-family: var(--ff-body);
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    #hero-emoji {
+        display: inline-block;
+        position: relative;
+        top: 0.5rem;
+        height: var(--fs-xl);
+    }
 }
 
 #hero-social {
     display: flex;
     gap: 1rem;
     margin: 0 auto 0 auto;
+
+    >a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 #skills {
@@ -109,27 +119,25 @@ export default {
     flex-direction: column;
     gap: 1.5rem;
     padding: 0 1rem 0 1rem;
-}
 
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        list-style: none;
+        justify-content: center;
+    }
 
-#skills ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    list-style: none;
-    justify-content: center;
-}
-
-#skills p {
-    display: flex;
-    margin: 0 auto 0 auto;
-    font-family: Mulish, sans-serif;
-    font-size: var(--fs-500);
-    color: #2d2e32;
-    font-weight: 600;
-    border-bottom: 2px solid rgba(45, 46, 50, .5);
-    border-right: none;
-    padding-bottom: 0.5rem;
-}
-</style>
+    p {
+        display: flex;
+        margin: 0 auto 0 auto;
+        font-family: var(--ff-body);
+        font-size: var(--fs-500);
+        color: #2d2e32;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(45, 46, 50, .5);
+        border-right: none;
+        padding-bottom: 0.5rem;
+    }
+}</style>
