@@ -2,19 +2,22 @@
     <div class="container" id="home-sheet">
         <div id="hero-card">
             <img id="hero-avatar" :src="require('@/assets/avatar.jpg')" alt="Jack_Ánh" />
-            <h1>Front-End React Developer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')" alt="waving_hand">
-            </h1>
-            <p>
-                Hi, I'm Jack Ánh. A passionate Front-end React/Vue Developer based in Hanoi, Vietnam.
-            </p>
-            <span id="hero-social">
-                <a href="https://facebook.com/Jacly123" target="_blank">
-                    <v-icon icon="mdi-facebook" size="30"></v-icon>
-                </a>
-                <a href="https://github.com/JaclyNolan" target="_blank">
-                    <v-icon icon="mdi-github" size="30"></v-icon>
-                </a>
-            </span>
+            <div>
+                <h1>Front-End React Developer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')"
+                        alt="waving_hand">
+                </h1>
+                <p>
+                    Hi, I'm Jack Ánh. A passionate Front-end React/Vue Developer based in Hanoi, Vietnam.
+                </p>
+                <span id="hero-social">
+                    <a href="https://facebook.com/Jacly123" target="_blank">
+                        <v-icon icon="mdi-facebook" size="30"></v-icon>
+                    </a>
+                    <a href="https://github.com/JaclyNolan" target="_blank">
+                        <v-icon icon="mdi-github" size="30"></v-icon>
+                    </a>
+                </span>
+            </div>
         </div>
         <div id="skills">
             <p>Tech Stack</p>
@@ -45,6 +48,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/_breakpoints';
+
 #home-sheet {
     display: flex;
     flex-direction: column;
@@ -140,4 +145,13 @@ export default {
         border-right: none;
         padding-bottom: 0.5rem;
     }
-}</style>
+
+
+}
+
+@include lg {
+    #hero-card {
+        flex-direction: row-reverse;
+    }
+}
+</style>
