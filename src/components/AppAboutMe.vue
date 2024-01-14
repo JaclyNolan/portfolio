@@ -76,7 +76,7 @@ export default {
 
 @include lg {
     #about-me-sheet {
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 45% 55%;
         text-align: left;
         align-items: start;
         justify-content: center;

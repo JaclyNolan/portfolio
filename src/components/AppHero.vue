@@ -158,8 +158,21 @@ export default {
     #home-sheet {
         padding-top: 10rem;
     }
+
     #hero-card {
         flex-direction: row-reverse;
+
+        #hero-avatar {
+            padding: 0;
+            max-width: 19rem;
+            max-height: 19rem;
+            object-fit: cover;
+            border-radius: 50%;
+
+            @media (min-width: 25rem) {
+                align-self: center;
+            }
+        }
 
         h1,
         p {
@@ -192,5 +205,4 @@ export default {
             margin-right: 5rem;
         }
     }
-}
-</style>
+}</style>
