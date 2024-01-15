@@ -1,10 +1,12 @@
 <template>
-    <v-btn :prepend-icon="icon" variant="text" class="lighten-4 mr-2" @click="goTo(routeName)">
+    <v-btn :prepend-icon="icon" variant="text" class="lighten-4 mr-2" @click="scrollToElement(htmlId)">
         {{ label }}
     </v-btn>
 </template>
 
 <script>
+import store from '@/store';
+
 export default {
     props: {
         routeName: {
@@ -19,11 +21,14 @@ export default {
             type: String,
             require: true,
         },
+        htmlId: {
+            type: String,
+            require: true,
+        }
     },
     methods: {
-        goTo(routeName) {
-            // Navigate to the specified route
-            this.$router.push({ name: routeName });
+        scrollToElement(htmlId) {
+            store.commit('setScrollTarget', htmlId);
         }
     }
 }

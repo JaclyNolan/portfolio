@@ -7,7 +7,7 @@
 
     <div class="d-none d-md-flex">
       <app-header-nav-button v-for="(item, index) in items" :key="index" :routeName="item.routeName" :icon="item.icon"
-        :label="item.label" />
+        :label="item.label" :htmlId="item.htmlId" />
     </div>
 
     <div class="d-md-none">
@@ -19,7 +19,7 @@
     <v-sheet class="d-flex align-center justify-center h-100 w-100">
       <v-container class="h-auto w-auto">
         <v-row v-for="(item, index) in items" :key="index">
-          <v-btn variant="text" class="lighten-4" @click="goTo(item.routeName)" :prepend-icon="item.icon">
+          <v-btn variant="text" class="lighten-4" @click="scrollToElement(item.htmlId)" :prepend-icon="item.icon">
             {{ item.label }}
           </v-btn>
         </v-row>
@@ -31,16 +31,17 @@
 <script>
 import AppLogo from './AppLogo.vue'
 import AppHeaderNavButton from './AppHeaderNavButton.vue';
+import store from '@/store';
 
 export default {
   data() {
     return {
       drawer: false,
       items: [
-        { routeName: 'Home', icon: 'mdi-home', label: 'Home' },
-        { routeName: 'About', icon: 'mdi-account', label: 'About' },
-        { routeName: 'Home', icon: 'mdi-briefcase', label: 'Projects' },
-        { routeName: 'Home', icon: 'mdi-email', label: 'Contact' },
+        { htmlId: 'home', routeName: 'Home', icon: 'mdi-home', label: 'Home' },
+        { htmlId: 'about-me', routeName: 'About', icon: 'mdi-account', label: 'About' },
+        { htmlId: 'projects', routeName: 'Home', icon: 'mdi-briefcase', label: 'Projects' },
+        { htmlId: 'contact', routeName: 'Home', icon: 'mdi-email', label: 'Contact' },
       ],
     };
   },
@@ -48,10 +49,10 @@ export default {
     //   toggleDrawer() {
     //     this.drawer = !this.drawer;
     //   },
-    goTo(routeName) {
-      this.$router.push({ name: routeName });
+    scrollToElement(htmlId) {
       this.drawer = false;
-    },
+      store.commit('setScrollTarget', htmlId);
+    }
   },
   components: { AppHeaderNavButton, AppLogo }
 };

@@ -161,6 +161,7 @@ export default {
 
     #hero-card {
         flex-direction: row-reverse;
+        gap: 5rem;
 
         #hero-avatar {
             padding: 0;
