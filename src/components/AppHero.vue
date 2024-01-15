@@ -75,7 +75,7 @@ export default {
         object-fit: cover;
         border-radius: 50%;
 
-        @media (min-width: 25rem) {
+        @media (min-width: 28rem) {
             align-self: center;
         }
     }

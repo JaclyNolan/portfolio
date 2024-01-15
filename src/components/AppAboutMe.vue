@@ -5,16 +5,16 @@
         </div>
         <div id="about-me-text">
             <h3>About me</h3>
-            <h4>A dedicated Front-end Developer
+            <h4>An up-and-coming Front-end Developer
                 <br />
                 based in Hanoi, Vietnam 📍
             </h4>
             <p>
-                As a Fresher Front-End Developer, I have gathered myself a practical skillset from participating in real
-                projects as a six-month full-stack intern. Furthermore, I prossess an impressive arsenal of skills in HTML,
-                CSS, Javascript, React, SCSS, Vue, and Laravel. I focus in building responsive webpage given a design and
-                handling complex design relatively fine. I strive to write optimized and clean code that work elequantly
-                through out the system by using modern development techniques and tools.
+                As a Fresher Front-End Developer, I have gathered a practical skillset from participating in real projects
+                as a six-month full-stack intern. Furthermore, I possess a moderate arsenal of skills in HTML, CSS,
+                Javascript, React, SCSS, Vue, and Laravel. I focus on building responsive web pages given a design and
+                handling complex designs relatively finely. I strive to write optimized and clean code that works elegantly
+                throughout the system using modern development techniques and tools.
             </p>
         </div>
     </div>
@@ -81,8 +81,8 @@ export default {
         align-items: start;
         justify-content: center;
     }
+
     #about-me-text {
         margin-top: 0;
     }
-}
-</style>
+}</style>
