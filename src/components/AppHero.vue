@@ -70,8 +70,7 @@ export default {
 
     #hero-avatar {
         padding: 0 3rem 0 3rem;
-        max-width: 25rem;
-        max-height: 25rem;
+        max-width: 22rem;
         object-fit: cover;
         border-radius: 50%;
 
