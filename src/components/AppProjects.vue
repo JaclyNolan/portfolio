@@ -65,7 +65,7 @@
                                 </a>
                             </v-hover>
                             <v-hover v-slot:default="{ isHovering, props }">
-                                <a href="https://hr-learning-web-server.vercel.app/" target="_blank">
+                                <a href="https://learning-centre-management.vercel.app/" target="_blank">
                                     <v-btn class="link-btn" v-bind="props" append-icon="mdi-television-classic" variant="Text" :color="isHovering ? '#147efb'
                                         : '#2d2e32'">Live Demo</v-btn>
                                 </a>
