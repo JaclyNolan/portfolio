@@ -46,13 +46,16 @@
                     <v-sheet class="project-windows-container">
                         <v-window class="project-windows elevation-2 rounded-lg" v-model="HRWindow" show-arrows="hover">
                             <v-window-item v-for="(image, index) in HRWindowImages" :key="index">
-                                <v-img class="project-image bg-gray" :src="image.path" :aspect-ratio="16 / 9" />
+                                <v-img class="project-image bg-gray" :src="image.path" />
                             </v-window-item>
                         </v-window>
                     </v-sheet>
                     <div class="project-description">
                         <h3>Learning Centre Management <span class="project-date">(July 2023)</span></h3>
-                        <p>A personal project where you can manage a learning centre database. This project consists of 3 roles: Admin, Trainer, Trainee. The features are CRUD, profile information changing, assign many-to-many relationship and edit-then-save quality of life feature. It is built on React and Vanilla CSS</p>
+                        <p>A personal project where you can manage a learning centre database. This project consists of 3
+                            roles: Admin, Trainer, Trainee. The features are CRUD, profile information changing, assign
+                            many-to-many relationship and edit-then-save quality of life feature. It is built on React and
+                            Vanilla CSS</p>
                         <div class="stack">
                             <v-sheet class="stack-item rounded-sm" elevation="3">React</v-sheet>
                             <v-sheet class="stack-item rounded-sm" elevation="3">Vanilla CSS</v-sheet>
@@ -66,8 +69,9 @@
                             </v-hover>
                             <v-hover v-slot:default="{ isHovering, props }">
                                 <a href="https://learning-centre-management.vercel.app/" target="_blank">
-                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-television-classic" variant="Text" :color="isHovering ? '#147efb'
-                                        : '#2d2e32'">Live Demo</v-btn>
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-television-classic"
+                                        variant="Text" :color="isHovering ? '#147efb'
+                                            : '#2d2e32'">Live Demo</v-btn>
                                 </a>
                             </v-hover>
                         </div>
@@ -222,15 +226,9 @@ export default {
 
         grid-template-columns: 55% 45%;
         align-items: center;
-
-        .project-windows-container,
-        .project-windows {
-            height: 100%;
-        }
     }
 
     .project-description {
         margin: 2rem 0;
     }
-}
-</style>
+}</style>
