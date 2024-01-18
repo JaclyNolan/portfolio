@@ -11,7 +11,7 @@
             </h4>
             <p>
                 As a Fresher Front-End Developer, I have gathered a practical skillset from participating in real projects
-                as a six-month full-stack intern. Furthermore, I possess a moderate arsenal of skills in HTML, CSS,
+                as a four-months full-stack intern. Furthermore, I possess a moderate arsenal of skills in HTML, CSS,
                 Javascript, React, SCSS, Vue, and Laravel. I focus on building responsive web pages given a design and
                 handling complex designs relatively finely. I strive to write optimized and clean code that works elegantly
                 throughout the system using modern development techniques and tools.
