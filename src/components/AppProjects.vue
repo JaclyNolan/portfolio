@@ -77,6 +77,41 @@
                         </div>
                     </div>
                 </v-sheet>
+                <v-sheet class="project-showcase" elevation="4" rounded="lg">
+                    <v-sheet class="project-windows-container">
+                        <v-window class="project-windows elevation-2 rounded-lg" v-model="UniWindow" show-arrows="hover">
+                            <v-window-item v-for="(image, index) in UniWindowImages" :key="index">
+                                <v-img class="project-image bg-gray" :src="image.path" />
+                            </v-window-item>
+                        </v-window>
+                    </v-sheet>
+                    <div class="project-description">
+                        <h3>University Academic Portal <span class="project-date">(June 2023)</span></h3>
+                        <p>School's final project. This project consists of 4
+                            roles: Admin, Staff, Teacher, Student. The features are CRUD, profile information changing, assign
+                            many-to-many relationship and edit-then-save quality of life feature. It is built on React and
+                            Vanilla CSS</p>
+                        <div class="stack">
+                            <v-sheet class="stack-item rounded-sm" elevation="3">React</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Vanilla CSS</v-sheet>
+                        </div>
+                        <div class="links">
+                            <v-hover v-slot:default="{ isHovering, props }">
+                                <a href="https://github.com/JaclyNolan/FAP-University-Web-Server" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-github" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Code</v-btn>
+                                </a>
+                            </v-hover>
+                            <v-hover v-slot:default="{ isHovering, props }">
+                                <a href="https://uni-management.vercel.app/" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-television-classic"
+                                        variant="Text" :color="isHovering ? '#147efb'
+                                            : '#2d2e32'">Live Demo</v-btn>
+                                </a>
+                            </v-hover>
+                        </div>
+                    </div>
+                </v-sheet>
             </div>
         </div>
     </div>
@@ -100,6 +135,16 @@ export default {
                 { path: require('@/assets/HR_example_4.png') },
                 { path: require('@/assets/HR_example_6.png') },
                 { path: require('@/assets/HR_example_5.png') },
+            ],
+            UniWindow: true,
+            UniWindowImages: [
+                { path: require('@/assets/Uni_example_1.png') },
+                { path: require('@/assets/Uni_example_2.png') },
+                { path: require('@/assets/Uni_example_3.png') },
+                { path: require('@/assets/Uni_example_4.png') },
+                { path: require('@/assets/Uni_example_5.png') },
+                { path: require('@/assets/Uni_example_6.png') },
+                { path: require('@/assets/Uni_example_7.png') },
             ],
         }
     },
