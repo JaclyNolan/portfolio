@@ -86,8 +86,8 @@
                         </v-window>
                     </v-sheet>
                     <div class="project-description">
-                        <h3>University Academic Portal <span class="project-date">(June 2023)</span></h3>
-                        <p>School's final project. This project consists of 4
+                        <h3>Uni Academic Portal <span class="project-date">(June 2023)</span></h3>
+                        <p>My school's final project. This project consists of 4
                             roles: Admin, Staff, Teacher, Student. The features are CRUD, profile information changing, assign
                             many-to-many relationship and edit-then-save quality of life feature. It is built on React and
                             Vanilla CSS</p>
