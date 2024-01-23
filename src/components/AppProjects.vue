@@ -59,6 +59,7 @@
                         <div class="stack">
                             <v-sheet class="stack-item rounded-sm" elevation="3">React</v-sheet>
                             <v-sheet class="stack-item rounded-sm" elevation="3">Vanilla CSS</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Laravel</v-sheet>
                         </div>
                         <div class="links">
                             <v-hover v-slot:default="{ isHovering, props }">
@@ -88,12 +89,11 @@
                     <div class="project-description">
                         <h3>Uni Academic Portal <span class="project-date">(June 2023)</span></h3>
                         <p>My school's final project. This project consists of 4
-                            roles: Admin, Staff, Teacher, Student. The features are CRUD, profile information changing, assign
-                            many-to-many relationship and edit-then-save quality of life feature. It is built on React and
-                            Vanilla CSS</p>
+                            roles: Admin, Staff, Teacher, Student. The notable features are CRUD, OAuth by Google, a time-based class schedule system, API token, Role and Authorization. It is built on React, Vanilla CSS and Laravel </p>
                         <div class="stack">
                             <v-sheet class="stack-item rounded-sm" elevation="3">React</v-sheet>
                             <v-sheet class="stack-item rounded-sm" elevation="3">Vanilla CSS</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Laravel</v-sheet>
                         </div>
                         <div class="links">
                             <v-hover v-slot:default="{ isHovering, props }">
