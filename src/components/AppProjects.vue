@@ -20,7 +20,7 @@
                     <div class="project-description">
                         <h3>Portfolio <span class="project-date">(January 2024)</span></h3>
                         <p>A viewable portfolio to display my personal projects as well as real projects. The website's
-                            design was based on another React portfolio developer. It can adapt to any screensize while
+                            design was BASED on Stefan Topalovic's React portfolio. It can adapt to any screensize while
                             still remain stylish throughout. It is built on Vue and SCSS</p>
                         <div class="stack">
                             <v-sheet class="stack-item rounded-sm" elevation="3">Vue</v-sheet>
