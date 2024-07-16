@@ -10,8 +10,8 @@
                     Hi, I'm Jack Ánh. A passionate Front-end React/Vue Developer based in Hanoi, Vietnam.
                 </p>
                 <span id="hero-social">
-                    <a href="https://facebook.com/Jacly123" target="_blank">
-                        <v-icon icon="mdi-facebook" size="30"></v-icon>
+                    <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-%C3%A1nh-baa435237/" target="_blank">
+                        <v-icon icon="mdi-linkedin" size="30"></v-icon>
                     </a>
                     <a href="https://github.com/JaclyNolan" target="_blank">
                         <v-icon icon="mdi-github" size="30"></v-icon>

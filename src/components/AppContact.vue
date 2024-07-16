@@ -15,7 +15,7 @@
                     <v-btn icon="mdi-email" variant="text" color="#147efb" :elevation="3"></v-btn>
                     <div class="contact-info">
                         <h3>Email</h3>
-                        <a href="mailto:anhbg330011@gmail.com">anhbg330011@gmail.com</a>
+                        <a href="mailto:anhbg330011@gmail.com">jackal.profession@gmail.com</a>
                     </div>
                 </div>
             </div>
