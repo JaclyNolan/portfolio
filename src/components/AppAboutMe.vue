@@ -5,16 +5,12 @@
         </div>
         <div id="about-me-text">
             <h3>About me</h3>
-            <h4>An up-and-coming Front-end Developer
+            <h4>Full-stack Engineer
                 <br />
                 based in Hanoi, Vietnam 📍
             </h4>
             <p>
-                As a Fresher Front-End Developer, I have gathered a practical skillset from participating in real projects
-                as a four-months full-stack intern. Furthermore, I possess a moderate arsenal of skills in HTML, CSS,
-                Javascript, React, SCSS, Vue, and Laravel. I focus on building responsive web pages given a design and
-                handling complex designs relatively finely. I strive to write optimized and clean code that works elegantly
-                throughout the system using modern development techniques and tools.
+                Full-stack engineer with 2+ years of experience, expanding my expertise in AI & Automation. At NashTech, I developed Vue 3 interfaces, built .NET Core APIs, and optimized SQL queries (30s→1s). Currently building an AI Screentime Coach to help users break unhealthy phone habits.
             </p>
         </div>
     </div>

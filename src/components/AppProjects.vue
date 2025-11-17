@@ -10,6 +10,33 @@
             <div id="projects-grid">
                 <v-sheet class="project-showcase" elevation="4" rounded="lg">
                     <v-sheet class="project-windows-container">
+                        <v-window class="project-windows elevation-2 rounded-lg" v-model="aiScreentimeWindow"
+                            show-arrows="hover">
+                            <v-window-item v-for="(image, index) in aiScreentimeWindowImages" :key="index">
+                                <v-img class="project-image bg-gray" :src="image.path" :aspect-ratio="16 / 9" />
+                            </v-window-item>
+                        </v-window>
+                    </v-sheet>
+                    <div class="project-description">
+                        <h3>AI Screentime Coach <span class="project-date">(Oct 2025 - Present)</span></h3>
+                        <p>An AI companion that monitors device activity and provides contextual interventions through character-driven dialogue. Built to solve my own problem of spending 8+ hours daily on phone. The MVP reduced my screen time from 8→5 hours. Features: pattern detection, personal context awareness, smart screenshot compression (60% reduction), and real-time processing without battery drain.</p>
+                        <div class="stack">
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Kotlin</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Cursor</v-sheet>
+                            <v-sheet class="stack-item rounded-sm" elevation="3">Mistral API</v-sheet>
+                        </div>
+                        <div class="links">
+                            <v-hover v-slot:default="{ isHovering, props }">
+                                <a href="https://github.com/JaclyNolan/AIPhoneReminderProject" target="_blank">
+                                    <v-btn class="link-btn" v-bind="props" append-icon="mdi-github" variant="Text" :color="isHovering ? '#147efb'
+                                        : '#2d2e32'">Code</v-btn>
+                                </a>
+                            </v-hover>
+                        </div>
+                    </div>
+                </v-sheet>
+                <v-sheet class="project-showcase" elevation="4" rounded="lg">
+                    <v-sheet class="project-windows-container">
                         <v-window class="project-windows elevation-2 rounded-lg" v-model="portfolioWindow"
                             show-arrows="hover">
                             <v-window-item v-for="(image, index) in portolioWindowImages" :key="index">
@@ -121,6 +148,10 @@
 export default {
     data() {
         return {
+            aiScreentimeWindow: true,
+            aiScreentimeWindowImages: [
+                { path: require('@/assets/AICoach_home_screen.jpg') },
+            ],
             portfolioWindow: true,
             portolioWindowImages: [
                 { path: require('@/assets/portfolio_example_1.png') },

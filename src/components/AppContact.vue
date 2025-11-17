@@ -8,7 +8,7 @@
                     <v-btn icon="mdi-map-marker" variant="text" color="#147efb" :elevation="3"></v-btn>
                     <div class="contact-info">
                         <h3>Location</h3>
-                        <p>Cau Giay, Hanoi, Vietnam</p>
+                        <p>Phú Mỹ, Mỹ Đình, Hà Nội</p>
                     </div>
                 </div>
                 <div class="contact-detail">

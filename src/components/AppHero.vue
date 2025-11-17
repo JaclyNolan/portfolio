@@ -3,14 +3,14 @@
         <div id="hero-card">
             <img id="hero-avatar" :src="require('@/assets/avatar.jpg')" alt="Jack_Ánh" />
             <div id="hero-info">
-                <h1>Front-End React Developer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')"
+                <h1>Full-stack Engineer <img id="hero-emoji" :src="require('@/assets/waving_hand.png')"
                         alt="waving_hand">
                 </h1>
                 <p>
-                    Hi, I'm Jack Ánh. A passionate Front-end React/Vue Developer based in Hanoi, Vietnam.
+                    Hi, I'm Jack Ánh. A full-stack engineer with 2+ years of experience, expanding my expertise in AI by increasingly integrating AI & Automation into my workflow. Based in Vietnam.
                 </p>
                 <span id="hero-social">
-                    <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-%C3%A1nh-baa435237/" target="_blank">
+                    <a href="https://www.linkedin.com/in/jack-anh/" target="_blank">
                         <v-icon icon="mdi-linkedin" size="30"></v-icon>
                     </a>
                     <a href="https://github.com/JaclyNolan" target="_blank">
@@ -34,6 +34,15 @@
                     </li>
                     <li>
                         <img src="https://skillicons.dev/icons?i=vue,laravel" alt="vue,laravel" />
+                    </li>
+                    <li>
+                        <img src="https://skillicons.dev/icons?i=kotlin,android" alt="kotlin,android" />
+                    </li>
+                    <li>
+                        <img src="https://skillicons.dev/icons?i=cs,dotnet" alt="csharp,dotnet" />
+                    </li>
+                    <li>
+                        <img src="https://skillicons.dev/icons?i=python" alt="python" />
                     </li>
                 </ul>
             </div>
